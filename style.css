@@ -1,0 +1,45 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  header {
+    background-color: rgb(32, 26, 26);
+    color: aliceblue;
+  }
+
+  .logo-section {
+
+  }
+
+  .image-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+  }
+
+  .image-section img {
+    width: 20%;
+  }
+
+  .joke-section {
+    margin: 50px 0;
+  }
+
+  .joke-section h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  .joke-section p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+
+  footer {
+    background-color: rgb(32, 26, 26);
+    text-align: center;
+    padding: 30px 0;
+    color: beige;
+  }
