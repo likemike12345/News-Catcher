@@ -12,14 +12,39 @@
 </head>
 
 <body>
+
+  <section class="top-banner">
+    <div class="container">
+      <h1 class="wth-heading">Whats The Weather In...</h1>
+      <form>
+        <input type="text" placeholder="Search for a city">
+        <button type="submit">Lets GO!</button>
+        <span class="msg"></span>
+      </form>
+    </div>
+  </section>
+
+  <section class="ajax-section">
+    <div class="container">
+      <ul class="cities"></ul>
+    </div>
+  </section>
  
- 
+  <section>
+    <div class="wrapper">
+      <div class="joke">
+        <p>Its Not All Doom And Gloom</p>
+      </div>
+      <button class="getJoke">Have A Joke</button>
+    </div>
+  </section>
 
   <!-- Moment.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
   <!-- jQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="script.js"></script>
+  <script src="./JOKEscript.js"></script>
+  <script src="./WTHscript.js"></script>
 </body>
 
 </html>
