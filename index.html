@@ -12,7 +12,7 @@
 </head>
 
 <body>
-
+  <!-- Weather Banner -->
   <section class="top-banner">
     <div class="container">
       <h1 class="wth-heading">Whats The Weather In...</h1>
@@ -24,49 +24,27 @@
     </div>
   </section>
 
+<!-- Cities Display -->
   <section class="ajax-section">
     <div class="container">
       <ul class="cities"></ul>
     </div>
   </section>
  
-  <section>
-    <div class="wrapper">
-      <div class="joke">
-        <p>Its Not All Doom And Gloom</p>
-      </div>
-      <button class="getJoke">Have A Joke</button>
-    </div>
-  </section>
-
-  <!-- Moment.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-  <!-- jQuery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="./JOKEscript.js"></script>
-  <script src="./WTHscript.js"></script>
-</body>
-<header>
-  <div class="logo-section">
-    <!--logo goes here-->
-  <div>
-    <div>
-      <h2></h2>
-      <div></div>
-    </div>
-  <nav>
-    <!--nav item goes here-->
-    <ul>
+<!-- News Jumbotron -->
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      
+       <ul class="display-4">
       <li>Home</li>
       <li>Business</li>
       <li>Sports</li>
       <li>Technology</li>
       <li>Entertainment</li>
     </ul>
-  </nav>
+    </div>
   </div>
-  </div>
-</header>
+
 <main>
   <div class="container">
     <section>
@@ -80,13 +58,27 @@
           <img src="" alt="">
       </div>
     </section>
-  </div>
+  </div> 
+  
   <div class="joke-section">
     <h2>Dad Jokes</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam obcaecati nisi sed explicabo quasi quia dolor sint deserunt vel autem?</p>
+    <div class="wrapper">
+      <div class="joke">
+        <p>Its Not All Doom And Gloom</p>
+      </div>
+      <button class="getJoke">Have A Joke</button>
+    </div>
     </div>
 </main>
-<footer>
+  <footer>
   <p>Copyright &copy; 2023 The News Catcher</p>
 </footer>
+  <!-- Moment.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./JOKEscript.js"></script>
+  <script src="./WTHscript.js"></script>
+</body>
 </html>
+
