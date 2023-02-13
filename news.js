@@ -28,6 +28,7 @@ window.onload = function() {
 };
 
 
+
 generalBtn.addEventListener("click",function(){
     newsType.innerHTML="<h4>General news</h4>";
     fetchGeneralNews();
@@ -195,10 +196,6 @@ function displayNews() {
         var card = document.createElement('div');
         card.className = "p-2";
 
-        var image = document.createElement('img');
-        image.setAttribute("height","matchparent");
-        image.setAttribute("width","100%");
-        image.src=news.urlToImage;
 
         var cardBody = document.createElement('div');
         
@@ -210,9 +207,9 @@ function displayNews() {
         dateHeading.className = "text-primary";
         dateHeading.innerHTML = date[0];
 
-        var discription = document.createElement('p');
-        discription.className="text-muted";
-        discription.innerHTML = news.description;
+        // var description = document.createElement('p');
+        // description.className="text-muted";
+        // description.innerHTML = news.description;
 
         var link = document.createElement('a');
         link.className="btn btn-dark";
@@ -222,11 +219,11 @@ function displayNews() {
 
         cardBody.appendChild(newsHeading);
         cardBody.appendChild(dateHeading);
-        cardBody.appendChild(discription);
         cardBody.appendChild(link);
-
-        card.appendChild(image);
         card.appendChild(cardBody);
+// cardBody.appendChild(description);
+        // card.appendChild(image);
+        
 
         col.appendChild(card);
 
