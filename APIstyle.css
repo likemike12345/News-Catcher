@@ -238,17 +238,6 @@ body {
     margin: 0 auto;
   }
 
-
-  .image-section {
-    display: flex;
-    justify-content: space-between;
-    margin: 30px 0;
-  }
-
-  .image-section img {
-    width: 20%;
-  }
-
   .joke-section {
     margin: 50px 0;
   }
