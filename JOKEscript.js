@@ -1,5 +1,5 @@
 const jokeButton = document.querySelector(".getJoke")
-const jokeHolder = document.querySelector(".joke")
+const jokeHolder = document.querySelector(".joke-section")
 
 
 async function fetchJoke() {
