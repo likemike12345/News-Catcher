@@ -5,37 +5,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="./APIstyle.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> 
+  <link rel="stylesheet" href="./APIstyle.css" />
   <title>News Catcher</title>
 </head>
 
 <body>
-  <!-- Weather Banner -->
-  <section class="top-banner">
-    <div class="container">
-      <h1 class="wth-heading">Whats The Weather In...</h1>
-      <form>
-        <input type="text" placeholder="Search for a city">
-        <button type="submit">Lets GO!</button>
-        <span class="msg"></span>
-      </form>
-    </div>
-  </section>
-
-<!-- Cities Display -->
-  <section class="ajax-section">
-    <div class="container">
-      <ul class="cities"></ul>
-    </div>
-  </section>
- 
-<!-- News Jumbotron -->
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      
-    <ul class="display-4">
+  
+ <!-- News Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">News Catcher</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
         <li class="nav-item">
             <a class="nav-link" aria-current="page" href="#genral" id="genral">General</a>
         </li>
@@ -53,11 +38,35 @@
         </li>
     </ul>
     <form class="d-flex">
-        <input class="form-control me-2" type="text" id="newsQuery" placeholder="Search news">
-        <button class="btn btn-outline-warning" type="button" id="searchBtn">Search</button>
-    </form>
+      <input class="form-control me-2" type="text" id="newsQuery" placeholder="Search news">
+      <button class="btn btn-outline-warning" type="button" id="searchBtn">Search</button>
+  </form>
     </div>
-  </div>
+  </nav>
+
+
+
+ 
+  
+  <!-- Weather Banner -->
+  <section class="top-banner pt-4">
+    <div class="container">
+      <h1 class="wth-heading">Whats The Weather In...</h1>
+      <form>
+        <input type="text" placeholder="Search for a city">
+        <button type="submit">Lets GO!</button>
+        <span class="msg"></span>
+      </form>
+    </div>
+  </section>
+
+<!-- Cities Display -->
+  <section class="ajax-section">
+    <div class="container">
+      <ul class="cities"></ul>
+    </div>
+  </section>
+ 
 
 <main>
 
@@ -68,15 +77,19 @@
 </div>
 
   <!-- Joke Section -->
-  <div class="joke-section">
-    <h2>Dad Jokes</h2>
+  <div class="jumbotron joke-section">
     <div class="wrapper">
-      <div class="joke">
-        <p>Its Not All Doom And Gloom</p>
+       <div>
+        <button type="button" class="getJoke">Have A Joke</button>
       </div>
-      <button class="getJoke">Have A Joke</button>
-    </div>
-    </div>
+      <div class="joke">
+        <p class="display-3">Its Not All Doom And Gloom</p>
+      </div>
+     </div>
+  </div>
+
+
+  
 </main>
   <footer>
   <p>Copyright &copy; 2023 The News Catcher</p>

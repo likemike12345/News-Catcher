@@ -14,12 +14,12 @@ var newsDataArr = [];
 
 // apis 
 const API_KEY = "c7704ea57bcd4fd89f9234200e52229c";
-const HEADLINES_NEWS = "https://newsapi.org/v2/top-headlines?country=in&apiKey=";
-const GENERAL_NEWS = "https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey=";
-const BUSINESS_NEWS = "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=";
-const SPORTS_NEWS = "https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=";
-const ENTERTAINMENT_NEWS = "https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=";
-const TECHNOLOGY_NEWS = "https://newsapi.org/v2/top-headlines?country=in&category=technology&pageSize=8&apiKey=";
+const HEADLINES_NEWS = "https://newsapi.org/v2/top-headlines?country=gb&apiKey=";
+const GENERAL_NEWS = "https://newsapi.org/v2/top-headlines?country=gb&category=general&apiKey=";
+const BUSINESS_NEWS = "https://newsapi.org/v2/top-headlines?country=gb&category=business&apiKey=";
+const SPORTS_NEWS = "https://newsapi.org/v2/top-headlines?country=gb&category=sports&apiKey=";
+const ENTERTAINMENT_NEWS = "https://newsapi.org/v2/top-headlines?country=gb&category=entertainment&apiKey=";
+const TECHNOLOGY_NEWS = "https://newsapi.org/v2/top-headlines?country=gb&category=technology&pageSize=8&apiKey=";
 const SEARCH_NEWS = "https://newsapi.org/v2/everything?q=";
 
 window.onload = function() {
@@ -74,7 +74,6 @@ const fetchHeadlines = async () => {
 
     displayNews();
 }
-
 
 const fetchGeneralNews = async () => {
     const response = await fetch(GENERAL_NEWS+API_KEY);
@@ -186,48 +185,101 @@ function displayNews() {
     //     return;
     // }
 
-    newsDataArr.forEach(news => {
 
-        var date = news.publishedAt.split("T");
+
+
+for (let i = 0; i < newsDataArr.length; i++) {
+       
+    if(i===12) {
+        break;
+    };
+    var date = newsDataArr[i].publishedAt.split("T");
         
-        var col = document.createElement('div');
-        col.className="col-sm-12 col-md-4 col-lg-3 p-2 card";
+    var col = document.createElement('div');
+    col.className="col-sm-12 col-md-4 col-lg-3 p-2 card";
 
-        var card = document.createElement('div');
-        card.className = "p-2";
+    var card = document.createElement('div');
+    card.className = "p-2";
 
 
-        var cardBody = document.createElement('div');
-        
-        var newsHeading = document.createElement('h5');
-        newsHeading.className = "card-title";
-        newsHeading.innerHTML = news.title;
+    var cardBody = document.createElement('div');
+    
+    var newsHeading = document.createElement('h5');
+    newsHeading.className = "card-title";
+    newsHeading.innerHTML = newsDataArr[i].title;
 
-        var dateHeading = document.createElement('h6');
-        dateHeading.className = "text-primary";
-        dateHeading.innerHTML = date[0];
+    var dateHeading = document.createElement('h6');
+    dateHeading.className = "text-primary";
+    dateHeading.innerHTML = date[0];
 
-        // var description = document.createElement('p');
-        // description.className="text-muted";
-        // description.innerHTML = news.description;
+    // var description = document.createElement('p');
+    // description.className="text-muted";
+    // description.innerHTML = news.description;
 
-        var link = document.createElement('a');
-        link.className="btn btn-dark";
-        link.setAttribute("target", "_blank");
-        link.href = news.url;
-        link.innerHTML="Read more";
+    var link = document.createElement('a');
+    link.className="btn btn-dark";
+    link.setAttribute("target", "_blank");
+    link.href = newsDataArr[i].url;
+    link.innerHTML="Read more";
 
-        cardBody.appendChild(newsHeading);
-        cardBody.appendChild(dateHeading);
-        cardBody.appendChild(link);
-        card.appendChild(cardBody);
+    cardBody.appendChild(newsHeading);
+    cardBody.appendChild(dateHeading);
+    cardBody.appendChild(link);
+    card.appendChild(cardBody);
 // cardBody.appendChild(description);
-        // card.appendChild(image);
+    // card.appendChild(image);
+    
+
+    col.appendChild(card);
+
+    newsdetails.appendChild(col);
+};
+
+ 
+;}
+
+    // newsDataArr.forEach(news => {
+
+//         var date = news.publishedAt.split("T");
+        
+//         var col = document.createElement('div');
+//         col.className="col-sm-12 col-md-4 col-lg-3 p-2 card";
+
+//         var card = document.createElement('div');
+//         card.className = "p-2";
+
+
+//         var cardBody = document.createElement('div');
+        
+//         var newsHeading = document.createElement('h5');
+//         newsHeading.className = "card-title";
+//         newsHeading.innerHTML = news.title;
+
+//         var dateHeading = document.createElement('h6');
+//         dateHeading.className = "text-primary";
+//         dateHeading.innerHTML = date[0];
+
+//         // var description = document.createElement('p');
+//         // description.className="text-muted";
+//         // description.innerHTML = news.description;
+
+//         var link = document.createElement('a');
+//         link.className="btn btn-dark";
+//         link.setAttribute("target", "_blank");
+//         link.href = news.url;
+//         link.innerHTML="Read more";
+
+//         cardBody.appendChild(newsHeading);
+//         cardBody.appendChild(dateHeading);
+//         cardBody.appendChild(link);
+//         card.appendChild(cardBody);
+// // cardBody.appendChild(description);
+//         // card.appendChild(image);
         
 
-        col.appendChild(card);
+//         col.appendChild(card);
 
-        newsdetails.appendChild(col);
-    });
+//         newsdetails.appendChild(col);
+//     });
 
-}
+// }
