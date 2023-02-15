@@ -1,6 +1,6 @@
 # News-Catcher
 
-# A simple, clean and responsive news app, delivering world wide live and historical news data
+# A simple, clean and responsive news app, delivering world wide live and historical news data and weather information
 
 # Features:
 
